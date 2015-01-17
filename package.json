@@ -1,0 +1,47 @@
+{
+  "author": "Dennis Torres <djtorres0@gmail.com>",
+  "browser": "browser.js",
+  "bugs": {
+    "url": "https://github.com/psirenny/lasergun/issues"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "qs": "^2.3.3",
+    "raygun": "^0.5.0",
+    "stack-trace": "0.0.9",
+    "superagent": "^0.21.0",
+    "tracekit": "^0.1.0",
+    "verge": "^1.9.1"
+  },
+  "description": "A browserifiable Raygun.io plugin.",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "homepage": "https://www.npmjs.com/package/lasergun",
+  "keywords": [
+    "browserify",
+    "chainable",
+    "fluent",
+    "node",
+    "plugin",
+    "raygun"
+  ],
+  "license": "MIT",
+  "main": "node.js",
+  "name": "lasergun",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psirenny/lasergun.git"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "envify": "^3.2.0",
+    "tape": "^3.2.0",
+    "testling": "^1.7.1"
+  }
+}
