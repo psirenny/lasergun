@@ -1,16 +1,19 @@
 laser gun
 ==========
 
-A javascript Raygun.io plugin as an alternative to [https://github.com/MindscapeHQ/raygun4node](raygun4node) and [https://github.com/MindscapeHQ/raygun4js](raygun4js).
+A javascript Raygun.io plugin as an alternative to:
+- [https://github.com/MindscapeHQ/raygun4node](raygun4node)
+- [https://github.com/MindscapeHQ/raygun4js](raygun4js).
 
 Motivation
 ----------
 
-The raygun4node plugin does not work when browserified which, makes it difficult to handle errors in isomorphic web apps.
-Moreover, creating a wrapper around raygun4node and raygun4js is unnecessarily complicated because each plugin has a different api.
+The raygun4node plugin does not work when browserified.
+I found it difficult to handle errors in isomorphic web apps.
+Creating a wrapper around raygun4node and raygun4js is hard because each plugin has a different api.
 
-Speaking about apis… I wanted the plugin to have a chainable fluent interface.
-Passing custom data, tags, etc. in the other plugins felt cumbersome.
+I also wanted the plugin to have a chainable fluent interface.
+Passing custom data, tags, etc. in the other plugins was cumbersome.
 
 Installation
 ------------
