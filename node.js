@@ -91,6 +91,7 @@ Client.prototype.tags = function (tags) {
     .concat(tags)
     .uniq()
     .value();
+    
   return this;
 };
 
