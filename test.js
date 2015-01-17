@@ -174,7 +174,7 @@ test('getError', function (t) {
 });
 
 test('send', function (t) {
-  var client = lib();
+  var client = lib().tag('ignore');
   t.plan(2);
 
   try {
