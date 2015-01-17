@@ -1,7 +1,7 @@
 laser gun
 ==========
 
-A javascript Raygun.io plugin as an alternative to:
+A javascript Raygun.io plugin alternative to:
 - [https://github.com/MindscapeHQ/raygun4node](raygun4node)
 - [https://github.com/MindscapeHQ/raygun4js](raygun4js).
 
