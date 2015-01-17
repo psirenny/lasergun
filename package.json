@@ -14,6 +14,12 @@
     "verge": "^1.9.1"
   },
   "description": "A browserifiable Raygun.io plugin.",
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "envify": "^3.2.0",
+    "tape": "^3.2.0",
+    "testling": "^1.7.1"
+  },
   "engines": {
     "node": "0.10.x"
   },
@@ -35,13 +41,7 @@
     "url": "https://github.com/psirenny/lasergun.git"
   },
   "scripts": {
-    "test": "node test"
+    "test": "browserify test.js -t envify | testling; node test"
   },
-  "version": "0.1.0",
-  "devDependencies": {
-    "browserify": "^8.1.1",
-    "envify": "^3.2.0",
-    "tape": "^3.2.0",
-    "testling": "^1.7.1"
-  }
+  "version": "0.1.0"
 }
