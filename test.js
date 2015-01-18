@@ -135,6 +135,18 @@ test('field: version', function (t) {
   t.equal(client, val);
 });
 
+test('clone', function (t) {
+  var client1 = lib();
+  var client2 = null;
+  t.plan(3);
+  t.equal(typeof client1.clone, 'function');
+  client1.version('1.0.0');
+  client2 = client1.clone();
+  t.equal(client1._data.entry.details.version, client2._data.entry.details.version);
+  client2.version('1.1.0');
+  t.notEqual(client1._data.entry.details.version, client2._data.entry.details.version);
+});
+
 test('getEntry', function (t) {
   var client = lib();
   var entry = null;
