@@ -5,7 +5,7 @@ A javascript Raygun.io plugin alternative to:
 - [https://github.com/MindscapeHQ/raygun4node](raygun4node)
 - [https://github.com/MindscapeHQ/raygun4js](raygun4js).
 
-[![Build Status](https://travis-ci.org/psirenny/derby-lang.png?branch=master)](https://travis-ci.org/psirenny/derby-lang)
+[![Build Status](https://travis-ci.org/psirenny/lasergun.png?branch=master)](https://travis-ci.org/psirenny/lasergun)
 
 ![lasergun](/index.png?raw=true)
 
