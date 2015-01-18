@@ -1,6 +1,6 @@
 {
   "author": "Dennis Torres <djtorres0@gmail.com>",
-  "browser": "browser.js",
+  "browser": "lib/browser.js",
   "bugs": {
     "url": "https://github.com/psirenny/lasergun/issues"
   },
@@ -33,7 +33,7 @@
     "raygun"
   ],
   "license": "MIT",
-  "main": "node.js",
+  "main": "lib/node.js",
   "name": "lasergun",
   "readmeFilename": "README.md",
   "repository": {
@@ -41,7 +41,7 @@
     "url": "https://github.com/psirenny/lasergun.git"
   },
   "scripts": {
-    "test": "browserify test.js -t envify | testling; node test"
+    "test": "node test; browserify test.js -t envify | testling"
   },
   "version": "0.1.0"
 }

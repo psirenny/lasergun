@@ -1,5 +1,5 @@
 var test = require('tape');
-var lib = require('./node');
+var lib = require('./lib/node');
 
 function errorFn2() {
   throw new Error('custom error');
