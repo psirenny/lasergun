@@ -42,7 +42,7 @@
     "url": "https://github.com/psirenny/lasergun.git"
   },
   "scripts": {
-    "test": "node test; browserify test.js -t envify | tape-run"
+    "test": "node test; browserify test.js -t envify | tape-run -b phantom"
   },
   "version": "0.1.1"
 }
