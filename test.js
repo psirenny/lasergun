@@ -183,7 +183,7 @@ test('getEntry', function (t) {
 
 test('getError', function (t) {
   var client = lib();
-  t.plan(12);
+  t.plan(15);
   t.equal(typeof client.getError, 'function');
 
   try {
@@ -200,6 +200,11 @@ test('getError', function (t) {
     t.equal(typeof error.stackTrace[0].fileName, 'string');
     t.equal(typeof error.stackTrace[0].lineNumber, 'number');
     t.equal(typeof error.stackTrace[0].methodName, 'string');
+    error = client.getError('yikes');
+    t.equal(error.message, 'yikes');
+    t.deepEqual(error.data, {error: 'yikes'});
+    error = client.getError({error: 'whoah'});
+    t.deepEqual(error.data, {error: 'whoah'});
     client.message('uh oh');
     error = client.getError(err);
     t.equal(error.message, 'uh oh');
@@ -207,7 +212,7 @@ test('getError', function (t) {
   }
 });
 
-test('send', function (t) {
+test.skip('send', function (t) {
   var client = lib().tag('ignore');
   t.plan(2);
 
