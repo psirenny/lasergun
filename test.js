@@ -73,8 +73,28 @@ test('field: message', function (t) {
   t.equal(client, val);
 });
 
-test.skip('field: request', function (t) {
-  // test...
+test('field: request', function (t) {
+  var client = lib();
+  var val = null;
+  t.plan(9);
+  t.equal(typeof client.request, 'function');
+  val = client.request({
+    body: {},
+    headers: {},
+    host: {},
+    method: 'GET',
+    ip: '0.0.0.0',
+    query: {},
+    path: '/'
+  });
+  t.equal(client, val);
+  t.equal(typeof client._data.entry.details.request.form, 'object');
+  t.equal(typeof client._data.entry.details.request.headers, 'object');
+  t.equal(typeof client._data.entry.details.request.hostName, 'object');
+  t.equal(typeof client._data.entry.details.request.httpMethod, 'string');
+  t.equal(typeof client._data.entry.details.request.ipAddress, 'string');
+  t.equal(typeof client._data.entry.details.request.queryString, 'object');
+  t.equal(typeof client._data.entry.details.request.url, 'string');
 });
 
 test('field: tag', function (t) {
