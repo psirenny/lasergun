@@ -92,7 +92,7 @@ test('field: request', function (t) {
   t.equal(typeof client._data.entry.details.request.headers, 'object');
   t.equal(typeof client._data.entry.details.request.hostName, 'object');
   t.equal(typeof client._data.entry.details.request.httpMethod, 'string');
-  t.equal(typeof client._data.entry.details.request.ipAddress, 'string');
+  t.equal(typeof client._data.entry.details.request.iPAddress, 'string');
   t.equal(typeof client._data.entry.details.request.queryString, 'object');
   t.equal(typeof client._data.entry.details.request.url, 'string');
 });
