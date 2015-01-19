@@ -150,13 +150,15 @@ test('clone', function (t) {
 test('getEntry', function (t) {
   var client = lib();
   var entry = null;
-  t.plan(4);
-  client.user(function () {return {identifier: 'id'};});
+  t.plan(5);
+  client.user(function (cb) {cb(null, {identifier: 'id'});});
   t.equal(typeof client.getEntry, 'function');
-  entry = client.getEntry();
-  t.equal(typeof entry, 'object');
-  t.equal(typeof entry.occurredOn, 'object');
-  t.deepEqual(entry.details.user, {identifier: 'id'});
+  client.getEntry(function (err, entry) {
+    t.notOk(err);
+    t.equal(typeof entry, 'object');
+    t.equal(typeof entry.occurredOn, 'object');
+    t.deepEqual(entry.details.user, {identifier: 'id'});
+  });
 });
 
 test('getError', function (t) {
