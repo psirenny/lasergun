@@ -81,7 +81,7 @@ test('field: request', function (t) {
   val = client.request({
     body: {},
     headers: {},
-    host: {},
+    hostname: '',
     method: 'GET',
     ip: '0.0.0.0',
     query: {},
@@ -90,7 +90,7 @@ test('field: request', function (t) {
   t.equal(client, val);
   t.equal(typeof client._data.entry.details.request.form, 'object');
   t.equal(typeof client._data.entry.details.request.headers, 'object');
-  t.equal(typeof client._data.entry.details.request.hostName, 'object');
+  t.equal(typeof client._data.entry.details.request.hostName, 'string');
   t.equal(typeof client._data.entry.details.request.httpMethod, 'string');
   t.equal(typeof client._data.entry.details.request.iPAddress, 'string');
   t.equal(typeof client._data.entry.details.request.queryString, 'object');
