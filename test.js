@@ -97,6 +97,16 @@ test('field: request', function (t) {
   t.equal(typeof client._data.entry.details.request.url, 'string');
 });
 
+test('field: response', function (t) {
+  var client = lib();
+  var val = null;
+  t.plan(3);
+  t.equal(typeof client.response, 'function');
+  val = client.response({statusCode: '200'});
+  t.equal(client, val);
+  t.equal(client._data.entry.details.response.statusCode, '200');
+});
+
 test('field: tag', function (t) {
   var client = lib();
   var val = null;
