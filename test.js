@@ -180,8 +180,9 @@ test('clone', function (t) {
 test('enable', function (t) {
   var client = lib();
   var val = null;
-  t.plan(4);
+  t.plan(5);
   t.equal(typeof client.enable, 'function');
+  t.equal(client._enabled, true);
   t.equal(client.enable(), client);
   t.equal(client._enabled, true);
   client.enable(false);
