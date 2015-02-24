@@ -177,6 +177,17 @@ test('clone', function (t) {
   t.notEqual(client1._data.entry.details.version, client2._data.entry.details.version);
 });
 
+test('enable', function (t) {
+  var client = lib();
+  var val = null;
+  t.plan(4);
+  t.equal(typeof client.enable, 'function');
+  t.equal(client.enable(), client);
+  t.equal(client._enabled, true);
+  client.enable(false);
+  t.equal(client._enabled, false);
+});
+
 test('getEntry', function (t) {
   var client = lib();
   var entry = null;
@@ -220,6 +231,17 @@ test('getError', function (t) {
     t.equal(error.message, 'uh oh');
     return;
   }
+});
+
+test('log', function (t) {
+  var client = lib();
+  var val = null;
+  t.plan(4);
+  t.equal(typeof client.log, 'function');
+  t.equal(client.log(), client);
+  t.equal(client._log, true);
+  client.log(false);
+  t.equal(client._log, false);
 });
 
 test.skip('send', function (t) {
