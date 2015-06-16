@@ -21,9 +21,6 @@
     "tape-run": "^0.3.0",
     "testling": "^1.7.1"
   },
-  "engines": {
-    "node": "0.10.x"
-  },
   "homepage": "https://www.npmjs.com/package/lasergun",
   "keywords": [
     "browserify",
